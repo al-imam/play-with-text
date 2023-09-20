@@ -21,7 +21,11 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 function toKabobCase(input: string): string {
-  return input.toLowerCase();
+  return input
+    .replace(/[\s_]+/g, "-")
+    .replace(/([a-z])([A-Z])/g, "$1-$2")
+    .replace(/-{2,}/g, "-")
+    .toLowerCase();
 }
 
 export function deactivate() {}
