@@ -14,8 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "play-with-text.helloWorld",
-        "title": "Hello World"
+        "command": "play-with-text.kebab-case-v2",
+        "title": "Transform kebab-case-v2"
       }
     ]
   },
