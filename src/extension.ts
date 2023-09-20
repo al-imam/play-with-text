@@ -22,6 +22,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 function toKabobCase(input: string): string {
   return input
+    .replace(/\s*(['"])\s*/g, "$1")
     .replace(/[\s_]+/g, "-")
     .replace(/([a-z])([A-Z])/g, "$1-$2")
     .replace(/-{2,}/g, "-")
