@@ -4,6 +4,10 @@
   "publisher": "al-imam",
   "description": "",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/al-imam/play-with-text"
+  },
   "engines": {
     "vscode": "^1.82.0"
   },
