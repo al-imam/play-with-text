@@ -6,12 +6,13 @@ export function activate(context: vscode.ExtensionContext) {
     () => {
       const editor = vscode.window.activeTextEditor;
       if (editor) {
-        const selection = editor.selection;
-
-        const selectedText = editor.document.getText(selection);
+        const selections = editor.selections;
 
         editor.edit((editBuilder) => {
-          editBuilder.replace(selection, toKabobCase(selectedText));
+          selections.forEach((selection) => {
+            const selectedText = editor.document.getText(selection);
+            editBuilder.replace(selection, toKabobCase(selectedText));
+          });
         });
       }
     }
