@@ -1,7 +1,7 @@
 import * as vscode from "vscode";
 
 export function activate(context: vscode.ExtensionContext) {
-  let disposable = vscode.commands.registerCommand(
+  const disposable = vscode.commands.registerCommand(
     "play-with-text.kebab-case-v2",
     () => {
       const editor = vscode.window.activeTextEditor;
